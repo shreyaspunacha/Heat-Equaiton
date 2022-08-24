@@ -2,6 +2,13 @@ import numpy as np
 from scipy import linalg
 import matplotlib.pyplot as plt
 
+"""
+
+This program solves 1D heat equation using 
+finite difference implicit method.
+
+"""
+
 
 def lhs_operator(N, sigma):
     """
@@ -97,5 +104,6 @@ if __name__ == "__main__":
 
     u = btcs_implicit(u0, nt, dt, dx, D)
 
+    # Plot the final field.
     Plot_Field(x, u, nt)
 
